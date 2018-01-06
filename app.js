@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+
 const app = express();
 
  
@@ -10,29 +11,18 @@ const app = express();
 //     next();
 // }
 
+//View Engine
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname,'views'));
+
 //MiddleWare must go through before getting to the server
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
 app.use(express.static(path.join(__dirname,'public')))
 
-var people = [
-    {
-        name:'Jeff',
-        age:30
-    },
-    {
-        name:'Sara',
-        age:22
-    },
-    {
-        name:'Bill',
-        age:30
-    }
-]
-
 app.get('/', function(req, res){
-    res.json(people);
+    res.render('index');
 });
 
 app.listen(3000,function(){
