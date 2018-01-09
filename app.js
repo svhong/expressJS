@@ -74,7 +74,7 @@ app.post('/users/add', function(req,res){
         email:req.body.email
     }
 
-    console.log(newUser)
+    console.log(new_user)
 })
 
 app.listen(3000,function(){
