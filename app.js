@@ -1,15 +1,9 @@
+//Dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-
-
 const app = express();
 
- 
-// var logger = function (req, res, next){
-//     console.log('Logging...');
-//     next();
-// }
 
 //View Engine
 app.set('view engine', 'ejs')
