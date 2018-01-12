@@ -69,6 +69,7 @@ app.post('/users/add', function(req,res){
     }
 
     console.log(new_user)
+    res.redirect('/')
 })
 
 app.listen(3000,function(){
