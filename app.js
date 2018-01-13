@@ -58,7 +58,7 @@ app.get('/', function(req, res){
     res.render('index', {
         title:'Customer',
         users:users //include the user array for browser
-    });
+     });
 });
 
 app.post('/users/add', function(req,res){
